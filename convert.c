@@ -247,6 +247,7 @@ static int has_crlf_in_index(const struct index_state *istate, const char *path)
 static int will_convert_lf_to_crlf(size_t len, struct text_stat *stats,
 				   enum crlf_action crlf_action)
 {
+	return 0;
 	if (output_eol(crlf_action) != EOL_CRLF)
 		return 0;
 	/* No "naked" LF? Nothing to convert, regardless. */
